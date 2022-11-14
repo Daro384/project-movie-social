@@ -8,10 +8,10 @@ Movie Social is an app where users can create lists of movies they have watched.
  * Browse through a list of other users
  * read the reviews and ratings from other users
 
-#Database structure:
+# Database structure:
 ![Screenshot 2022-11-14 154155](https://user-images.githubusercontent.com/99115851/201772312-9f869419-a05e-48ef-9033-49e68d25d9a6.png)
 
-#Wireframes
+# Wireframes
 <img width="894" alt="Screenshot 2022-11-14 at 1 42 35 PM" src="https://user-images.githubusercontent.com/99115851/201781028-3fc08654-d8ae-4a52-835e-fe83085306f1.png">
 <img width="911" alt="Screenshot 2022-11-14 at 1 42 46 PM" src="https://user-images.githubusercontent.com/99115851/201781027-05d39ee4-a631-4b8c-91ef-3695f1bc56d1.png">
 <img width="941" alt="Screenshot 2022-11-14 at 1 42 59 PM" src="https://user-images.githubusercontent.com/99115851/201781024-be7942cf-a065-44f2-b573-ec8605ce2676.png">
