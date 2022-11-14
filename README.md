@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Movie Social
+Movie Social is an app where users can create lists of movies they have watched. The app will allow users to rate their movies and write reviews. The users can also browse other through other users profiles and see their reviews and what movies they have watched. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#User Stories
+ *User can log into their account
+ *search through a catalog of movies
+ *Write reviews and rate each movie
+ *Browse through a list of other users
+ *read the reviews and ratings from other users
 
-## Available Scripts
+#Database structure:
+![Screenshot 2022-11-14 154155](https://user-images.githubusercontent.com/99115851/201772312-9f869419-a05e-48ef-9033-49e68d25d9a6.png)
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Wireframes
+<img width="872" alt="Screenshot 2022-11-14 at 1 43 52 PM" src="https://user-images.githubusercontent.com/99115851/201781002-930b286b-4a34-4907-a6f3-17603b3139b3.png">
+<img width="865" alt="Screenshot 2022-11-14 at 1 43 39 PM" src="https://user-images.githubusercontent.com/99115851/201781008-3431f8a5-47d7-4321-a2a5-a6b646ba49a9.png">
+<img width="936" alt="Screenshot 2022-11-14 at 1 43 13 PM" src="https://user-images.githubusercontent.com/99115851/201781022-63fea720-70bd-41d3-997a-bdd1db45648d.png">
+<img width="941" alt="Screenshot 2022-11-14 at 1 42 59 PM" src="https://user-images.githubusercontent.com/99115851/201781024-be7942cf-a065-44f2-b573-ec8605ce2676.png">
+<img width="911" alt="Screenshot 2022-11-14 at 1 42 46 PM" src="https://user-images.githubusercontent.com/99115851/201781027-05d39ee4-a631-4b8c-91ef-3695f1bc56d1.png">
+<img width="894" alt="Screenshot 2022-11-14 at 1 42 35 PM" src="https://user-images.githubusercontent.com/99115851/201781028-3fc08654-d8ae-4a52-835e-fe83085306f1.png">
