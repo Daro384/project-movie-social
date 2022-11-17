@@ -1,22 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function SearchForm() {
-    const [input, setInput] = useState([]);
-    // const [movie, setMovie] = useState([]);
+function SearchForm({ handleSubmit, setMovieResults }) {
+    const [input, setInput] = useState("");
 
     function handleSubmit(e) {
         e.preventDefault()
-
+         
         fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${input}`)
             .then(r => r.json())
-            .then(console.log);
+            .then(setMovieResults)       
     }
 
+
+    
 
     return (
         <section id="search-form">
             <form onSubmit={ handleSubmit }>
-                <label> Search Movie 
+                <label> Search for a Movie 
                     <br/>
                     <input 
                         onChange={(e) => setInput(e.target.value)}
@@ -26,7 +27,7 @@ function SearchForm() {
                     />
                 </label>
                 <br/>
-                <button type="submit">Add To My Movies</button>
+                <button type="submit">Find a Movie!</button>
             </form>
         </section>
     );
