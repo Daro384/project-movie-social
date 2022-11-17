@@ -8,7 +8,8 @@ function SearchForm({ handleSubmit, setMovieResults }) {
          
         fetch(`http://www.omdbapi.com/?apikey=${process.env.REACT_APP_OMDB_API_KEY}&s=${input}`)
             .then(r => r.json())
-            .then(setMovieResults)       
+            .then(setMovieResults)  
+            .then(console.log('basic info fetched for movieResults'))     
     }
 
 
