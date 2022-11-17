@@ -8,6 +8,7 @@ import Login from './pages/Login.js'
 import UserMovies from "./pages/UserMovies"
 import { Route, Routes } from 'react-router-dom'
 import React,{useState} from 'react';
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
 
