@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React,{useState, useEffect} from 'react';
+import MovieInfo from "../components/MovieInfo"
 import SearchForm from '../components/SearchForm'
 import MovieCard from '../components/MovieCard';
 import { Card } from "semantic-ui-react";
@@ -6,8 +7,6 @@ import { Card } from "semantic-ui-react";
 
 const Movies = () => {
     const [movieResults, setMovieResults] = useState({});
-
-
     return (
         <div>
             <h1>Movies</h1>
