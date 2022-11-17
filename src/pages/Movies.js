@@ -1,7 +1,4 @@
-import React from 'react';
-
-const Movies = () => {
-    return <h1>Movies</h1>
-};
+import React,{useState, useEffect} from 'react';
+import MovieInfo from "../components/MovieInfo"
 
 export default Movies;
