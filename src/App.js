@@ -22,7 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Login setUsername={setUsername}/>} />
             <Route path="/MyMovies" element={<MyMovies username={username}/>} />
-            <Route path="/Movies" element={<Movies />} />
+            <Route path="/Movies" element={<Movies username={username}/>} />
             <Route exact path="/OtherUsers" element={<OtherUsers />} />
             <Route path="/OtherUsers/:username" element={<UserMovies />} />
           </Routes>

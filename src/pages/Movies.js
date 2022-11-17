@@ -5,7 +5,7 @@ import MovieCard from '../components/MovieCard';
 import { Card } from "semantic-ui-react";
 
 
-const Movies = () => {
+const Movies = ({username}) => {
     const [movieResults, setMovieResults] = useState({});
     return (
         <div>
@@ -20,7 +20,7 @@ const Movies = () => {
             */}
             <Card.Group itemsPerRow={5}>
                 {movieResults.Search?.map(movie => {
-                   return <MovieCard key={`${movie.Title}-${movie.Year}`} title={movie.Title} poster={movie.Poster} year={movie.Year} isFromSearch={true}/>
+                    return <MovieCard key={`${movie.Title}-${movie.Year}`} title={movie.Title} poster={movie.Poster} year={movie.Year} username={username}/>
                 })}
                 {/* <pre>{JSON.stringify(movieResults, null, 10)}</pre> */}
             </Card.Group>
