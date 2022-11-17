@@ -21,7 +21,7 @@ const Movies = () => {
             */}
             <Card.Group itemsPerRow={5}>
                 {movieResults.Search?.map(movie => {
-                   return <MovieCard key={`${movie.Title}-${movie.Year}`} title={movie.Title} poster={movie.Poster} year={movie.Year} />
+                   return <MovieCard key={`${movie.Title}-${movie.Year}`} title={movie.Title} poster={movie.Poster} year={movie.Year} isFromSearch={true}/>
                 })}
                 {/* <pre>{JSON.stringify(movieResults, null, 10)}</pre> */}
             </Card.Group>
