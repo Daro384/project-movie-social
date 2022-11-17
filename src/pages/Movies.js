@@ -1,8 +1,9 @@
 import React,{useState, useEffect} from 'react';
-import MovieInfo from "../components/MovieInfo"
+// import MovieInfo from "../components/MovieInfo"
 import SearchForm from '../components/SearchForm'
 import MovieCard from '../components/MovieCard';
 import { Card } from "semantic-ui-react";
+import MovieInfoModal from '../components/MovieInfoModal';
 
 
 const Movies = () => {
@@ -20,7 +21,8 @@ const Movies = () => {
             */}
             <Card.Group itemsPerRow={5}>
                 {movieResults.Search?.map(movie => {
-                   return <MovieCard key={`${movie.Title}-${movie.Year}`} title={movie.Title} poster={movie.Poster} year={movie.Year} isFromSearch={true}/>
+                   return <MovieCard key={`${movie.Title}-${movie.Year}`} title={movie.Title} poster={movie.Poster} year={movie.Year} movieId={movie.imdbID} isFromSearch={true}/>
+                // return <MovieInfoModal movieId={movie.imdbID}></MovieInfoModal>
                 })}
                 {/* <pre>{JSON.stringify(movieResults, null, 10)}</pre> */}
             </Card.Group>
