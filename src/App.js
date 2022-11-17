@@ -7,6 +7,7 @@ import MyMovies from './pages/MyMovies.js'
 import OtherUsers from './pages/OtherUsers.js'
 import Login from './pages/Login.js'
 import { Route, Routes } from 'react-router-dom'
+import 'semantic-ui-css/semantic.min.css'
 
 
 function App() {
