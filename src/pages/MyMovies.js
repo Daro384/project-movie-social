@@ -1,20 +1,26 @@
-import React,{useState, useEffect} from 'react';
-import MovieCard from '../components/MovieCard';
+import React, { useState, useEffect } from 'react';
 import MyMovieCard from '../components/MyMovieCard';
 
-const MyMovies = ({username}) => {
+const MyMovies = ({ username, inMyMovies, setInMyMovies }) => {
     const [userData, setUserData] = useState([])
+    // console.log(username, 'outside effect')
 
-    useEffect(() => 
-    {
+    useEffect(() => {
+        // skip first render
+        // console.log(username, 'inside effect')
         fetch(`http://localhost:9292/users/${username}`)
-        .then(resp => resp.json())
-        .then(setUserData)
+            .then(resp => resp.json())
+            .then(setUserData)
     }, [])
 
-
     const movieContainer = userData.reviews?.map(review => {
-        return <MyMovieCard key={review.id} movie={review.movie}/>
+        return <MyMovieCard
+            key={review.id}
+            movie={review.movie}
+            movieId={review.movie_id}
+            review={review}
+            userData={userData}
+        />
     })
 
     return (

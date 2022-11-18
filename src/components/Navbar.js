@@ -20,7 +20,7 @@ const Navbar = () => {
                 <CustomLink to="/">Login</CustomLink>
                 <CustomLink to="/MyMovies">My Movies</CustomLink>
                 <CustomLink to="/Movies">Movies</CustomLink>
-                <CustomLink to="/OtherUsers">Other Users</CustomLink>
+                {/* <CustomLink to="/OtherUsers">Other Users</CustomLink> */}
             </ul>
         </nav>
     )
