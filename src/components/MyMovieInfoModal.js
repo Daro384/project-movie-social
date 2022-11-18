@@ -1,12 +1,18 @@
 import React from "react"
 import { Button, Image, Modal } from 'semantic-ui-react'
+import './MyMovieInfoModal.css'
 
 const MyMovieInfoModal = ({ open, setOpen, movie, review }) => {
     // console.log(movie)
 
     return (
         <Modal open={open}>
-            <Modal.Header>{movie.title}</Modal.Header>
+            <Modal.Header>
+                {movie.title}
+                <Modal.Actions id="btn-container">
+                    <Button onClick={() => setOpen(false)}>X</Button>
+                </Modal.Actions>
+            </Modal.Header>
             <Modal.Content image>
                 <Image size='medium' src={movie.poster} wrapped />
                 <Modal.Description>
@@ -23,9 +29,6 @@ const MyMovieInfoModal = ({ open, setOpen, movie, review }) => {
                     <p>My Review: {review.review}</p>
 
                 </Modal.Description>
-                <Modal.Actions>
-                    <Button onClick={() => setOpen(false)}>Close</Button>
-                </Modal.Actions>
             </Modal.Content>
         </Modal>
     )

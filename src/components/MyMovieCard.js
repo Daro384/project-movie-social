@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Card, Image } from "semantic-ui-react";
 import MyMovieInfoModal from './MyMovieInfoModal';
 import MovieReviewModal from './MovieReviewModal';
+import './MyMovieCard.css'
 
 const MyMovieCard = ({ movie, movieId, review, userData }) => {
     // state value to track when modal is open or not
@@ -20,7 +21,7 @@ const MyMovieCard = ({ movie, movieId, review, userData }) => {
 
     return (
         <>
-                <Card onClick={handleClick}>
+                <Card id="card" onClick={handleClick}>
                     <Image src={movie.poster}/>
                     <Card.Content>
                         <Card.Header>{movie.title}</Card.Header>
@@ -28,7 +29,7 @@ const MyMovieCard = ({ movie, movieId, review, userData }) => {
                     </Card.Content>
                     
                     <Card.Content extra>
-                        <Button onClick={handleReviewClick}>Review</Button>
+                        <Button id="button" onClick={handleReviewClick}>Review</Button>
                     </Card.Content>
                 </Card>
                 <MyMovieInfoModal

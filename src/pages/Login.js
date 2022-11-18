@@ -1,5 +1,6 @@
 import React,{ useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'
 
 const Login = ({setUsername}) => {
     const [name, setName] = useState("")
@@ -31,15 +32,18 @@ const Login = ({setUsername}) => {
 
     return (
     <>
-        <h1>Login</h1>
+        <h1 id="header">Login</h1>
         <form onSubmit={onSubmit}>
             <label>Username:
+                <br/>
             <input
+                className="username"
                 type="text"
                 onChange={e => setName(e.target.value)}
             />
             </label>
-            <input type="submit"/>
+            <br/>
+            <input type="submit" className="submit"/>
         </form>
     </>
     )

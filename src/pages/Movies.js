@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SearchForm from '../components/SearchForm'
 import ResultMovieCard from '../components/ResultMovieCard';
 import { Card } from "semantic-ui-react";
+import './Movies.css'
 
 const Movies = ({ username }) => {
 

@@ -1,0 +1,30 @@
+.ui.modal>.content {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+    padding: 1.5rem;
+    background: #E2DED0;
+    color: #4E4F50;
+}
+
+.ui.modal>.header {
+    display: block;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    background: #647C90;
+    margin: 0;
+    padding: 1.25rem 1.5rem;
+    box-shadow: none;
+    color: rgba(0,0,0,.85);
+    border-bottom: 1px solid rgba(34,36,38,.15);
+}
+
+button.ui.button {
+    background-color: #647C90;
+    color: black;
+}
+
+#btn-container {
+    float: right;
+   }
+

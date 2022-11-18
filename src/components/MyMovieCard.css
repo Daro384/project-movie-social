@@ -1,0 +1,14 @@
+/* .card {
+    background-color: #E2DED0;
+} */
+
+/* #button {
+    background-color: #E7D2CC;
+} */
+
+.ui.cards>.card {
+    display: flex;
+    margin: 0.875em 0.5em;
+    float: none;
+    background-color: #E2DED0;
+}
