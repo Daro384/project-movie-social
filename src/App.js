@@ -12,7 +12,8 @@ import 'semantic-ui-css/semantic.min.css'
 
 function App() {
 
-  const [username, setUsername] = useState([])
+  const [username, setUsername] = useState('')
+
 
   return (
     <div className="App">
@@ -21,10 +22,10 @@ function App() {
         <div className="container">
           <Routes>
             <Route path="/" element={<Login setUsername={setUsername}/>} />
-            <Route path="/MyMovies" element={<MyMovies username={username}/>} />
-            <Route path="/Movies" element={<Movies username={username}/>} />
+            <Route path="/MyMovies" element={<MyMovies username={username} />} />
+            <Route path="/Movies" element={<Movies username={username} />} />
             <Route exact path="/OtherUsers" element={<OtherUsers />} />
-            <Route path="/OtherUsers/:username" element={<UserMovies />} />
+            {/* <Route path="/OtherUsers/:username" element={<UserMovies />} /> */}
           </Routes>
         </div>
       </header>
