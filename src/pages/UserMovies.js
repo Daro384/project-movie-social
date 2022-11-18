@@ -1,6 +1,6 @@
 import React,{ useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import MovieCard from "../components/MovieCard";
+import MyMovieCard from "../components/MyMovieCard";
 
 const UserMovies = () => {
 
@@ -14,8 +14,10 @@ const UserMovies = () => {
     },[])
 
     const movieCards = user.reviews.map(review => {
-        return <MovieCard key={review.id} title={review.movie.title} img_url={review.movie.img_url} rating={review.rating}/>
+        console.log(review)
+        return <MyMovieCard key={review.id} movie={review.movie}/>
     })
+
     return (
         <>
             <h1>{user.username}'s Movies</h1>

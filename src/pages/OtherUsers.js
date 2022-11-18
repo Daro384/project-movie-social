@@ -32,7 +32,7 @@ const OtherUsers = () => {
         const hasReviews = Boolean(user.reviews[0]) //checks if user has any reviews
         const bestReview = hasReviews ? findHighestRatedMovie(user.reviews) : "No reviews"
         const title = hasReviews ? bestReview.movie.title : "N/A"
-        const URL = hasReviews ? bestReview.movie.img_url : "N/A"
+        const URL = hasReviews ? bestReview.movie.poster : "N/A"
         const rating = hasReviews ? bestReview.rating : "N/A"
         
         return <UserCard 
