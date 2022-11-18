@@ -20,19 +20,13 @@ const MyMovieCard = ({ movie, movieId, review, userData }) => {
 
     return (
         <>
-            <Card.Group centered items={MyMovieCard} itemsPerRow={3}>
                 <Card onClick={handleClick}>
-                    <Image src={movie.poster} />
+                    <Image src={movie.poster}/>
                     <Card.Content>
                         <Card.Header>{movie.title}</Card.Header>
                         <Card.Meta>Released: {movie.year}</Card.Meta>
                     </Card.Content>
-                    {/* 
-            conditionally render the extra card content,
-            depending on boolean prop. 
-            is this a search Movie card or My Movie card? 
-            the two branching paths can also be functions that return JSX
-            */}
+                    
                     <Card.Content extra>
                         <Button onClick={handleReviewClick}>Review</Button>
                     </Card.Content>
@@ -52,7 +46,6 @@ const MyMovieCard = ({ movie, movieId, review, userData }) => {
                     review={review}
                     userData={userData}
                 />
-            </Card.Group>
         </>
     )
 };

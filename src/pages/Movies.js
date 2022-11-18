@@ -11,7 +11,7 @@ const Movies = ({ username }) => {
 
     return (
         <div>
-            <h1>Search for Movies</h1>
+            <h1>Movies</h1>
             <SearchForm
                 setMovieResults={setMovieResults}
                 movieResults={movieResults}

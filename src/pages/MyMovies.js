@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MyMovieCard from '../components/MyMovieCard';
+import { Button, Card, Image } from "semantic-ui-react";
 
 const MyMovies = ({ username, inMyMovies, setInMyMovies }) => {
     const [userData, setUserData] = useState([])
@@ -14,6 +15,7 @@ const MyMovies = ({ username, inMyMovies, setInMyMovies }) => {
     }, [])
 
     const movieContainer = userData.reviews?.map(review => {
+        
         return <MyMovieCard
             key={review.id}
             movie={review.movie}
@@ -26,7 +28,9 @@ const MyMovies = ({ username, inMyMovies, setInMyMovies }) => {
     return (
         <>
             <h1>My Movies</h1>
-            {movieContainer}
+            <Card.Group items={MyMovieCard} centered>
+                {movieContainer}
+            </Card.Group>
         </>
     )
 }
