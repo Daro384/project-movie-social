@@ -1,19 +1,17 @@
-import React,{useState, useEffect} from 'react';
-// import MovieInfo from "../components/MovieInfo"
+import React, { useState, useEffect } from 'react';
 import SearchForm from '../components/SearchForm'
-import MovieCard from '../components/MovieCard';
+import ResultMovieCard from '../components/ResultMovieCard';
 import { Card } from "semantic-ui-react";
-import MovieInfoModal from '../components/MovieInfoModal';
 
-const Movies = ({username}) => {
+const Movies = ({ username }) => {
 
-    
+
     const [movieResults, setMovieResults] = useState({});
-    
+
 
     return (
         <div>
-            <h1>Movies</h1>
+            <h1>Search for Movies</h1>
             <SearchForm
                 setMovieResults={setMovieResults}
                 movieResults={movieResults}
@@ -24,8 +22,13 @@ const Movies = ({username}) => {
             */}
             <Card.Group itemsPerRow={5}>
                 {movieResults.Search?.map(movie => {
-                   return <MovieCard key={`${movie.Title}-${movie.Year}`} title={movie.Title} poster={movie.Poster} year={movie.Year} movieId={movie.imdbID} username={username}/>
-                // return <MovieInfoModal movieId={movie.imdbID}></MovieInfoModal>
+                    return <ResultMovieCard
+                        key={`${movie.Title}-${movie.Year}`}
+                        title={movie.Title}
+                        poster={movie.Poster}
+                        year={movie.Year}
+                        movieId={movie.imdbID}
+                        username={username} />
                 })}
                 {/* <pre>{JSON.stringify(movieResults, null, 10)}</pre> */}
             </Card.Group>
