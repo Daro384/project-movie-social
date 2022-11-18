@@ -20,6 +20,7 @@ const MyMovieInfoModal = ({ open, setOpen, movie, review }) => {
                     <p>Writer: {movie.writer}</p>
                     <p>IMDb Rating: {movie.imdb_rating}</p>
                     <p>My Rating: {review.rating}</p>
+                    <p>My Review: {review.review}</p>
 
                 </Modal.Description>
                 <Modal.Actions>
