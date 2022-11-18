@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import MovieCard from '../components/MovieCard';
+import MyMovieCard from '../components/MyMovieCard';
 
 const MyMovies = ({username}) => {
     const [userData, setUserData] = useState([])
@@ -10,11 +11,10 @@ const MyMovies = ({username}) => {
         .then(resp => resp.json())
         .then(setUserData)
     }, [])
-    
-    console.log(userData)
+
 
     const movieContainer = userData.reviews?.map(review => {
-        return <MovieCard key={review.id} title={review.movie.title} img_url={review.movie.img_url} rating={review.rating}/>
+        return <MyMovieCard key={review.id} movie={review.movie}/>
     })
 
     return (

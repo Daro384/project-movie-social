@@ -13,7 +13,6 @@ const MovieCard = ({ title, poster, year, movieId, username }) => {
             .then(r => r.json())
             .then(movie => {
                 setMovie(movie)
-                console.log('detailed movie data fetched')
             })
         fetch(`http://localhost:9292/user_movies/${username}`)
         .then(resp => resp.json())
@@ -38,7 +37,7 @@ const MovieCard = ({ title, poster, year, movieId, username }) => {
                 username: username,
                 title: movie.Title,
                 year: intYear,
-                poster: movie.Poster,
+                poster: poster,
                 genre: movie.Genre,
                 actors: movie.Actors,
                 director: movie.Director,
