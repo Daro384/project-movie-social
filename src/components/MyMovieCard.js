@@ -1,16 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Card, Image } from "semantic-ui-react";
-import MovieInfoModal from './MovieInfoModal';
+import MyMovieInfoModal from './MyMovieInfoModal';
+import MovieReviewModal from './MovieReviewModal';
 
-const MyMovieCard = ({ movie }) => {
+const MyMovieCard = ({ movie, movieId, review, userData }) => {
     // state value to track when modal is open or not
-        const [open, setOpen] = useState(false);
-        function handleClick() {
-            setOpen(open => !open)
-        }
+    const [open, setOpen] = useState(false);
+    const [openReview, setOpenReview] = useState(false);
 
-        return (
-            <>
+    const handleReviewClick = (e) => {
+        e.stopPropagation()
+        setOpenReview(openReview => !openReview)
+
+    }
+
+    function handleClick() {
+        setOpen(open => !open)
+    }
+
+    return (
+        <>
+            <Card.Group centered items={MyMovieCard} itemsPerRow={3}>
                 <Card onClick={handleClick}>
                     <Image src={movie.poster} />
                     <Card.Content>
@@ -23,15 +33,28 @@ const MyMovieCard = ({ movie }) => {
             is this a search Movie card or My Movie card? 
             the two branching paths can also be functions that return JSX
             */}
+                    <Card.Content extra>
+                        <Button onClick={handleReviewClick}>Review</Button>
+                    </Card.Content>
                 </Card>
-                <MovieInfoModal 
-                    open={open} 
-                    setOpen={setOpen} 
-                    movieId={movie.movieId} 
+                <MyMovieInfoModal
+                    open={open}
+                    setOpen={setOpen}
+                    movieId={movie.movieId}
                     movie={movie}
+                    review={review}
                 />
-            </>
-        )
-    };
-    
-    export default MyMovieCard;
+                <MovieReviewModal
+                    open={openReview}
+                    setOpen={setOpenReview}
+                    movieId={movieId}
+                    movie={movie}
+                    review={review}
+                    userData={userData}
+                />
+            </Card.Group>
+        </>
+    )
+};
+
+export default MyMovieCard;
